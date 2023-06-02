@@ -1,7 +1,6 @@
 # ChatDynamix
 Este repositorio es un proyecto de desarrollo de un chat utilizando la tecnología de OpenAI. El objetivo principal es construir un chatbot inteligente y conversacional que pueda mantener interacciones naturales y fluidas con los usuarios.
 
-
 El repositorio contiene el código fuente necesario para implementar el chatbot, integrando diversas librerías y frameworks de procesamiento de lenguaje natural Estas herramientas permiten realizar tareas como el análisis de sentimientos, la detección de entidades, el reconocimiento de intenciones y la generación de respuestas coherentes y contextualmente relevantes.
 
 Se proporcionan ejemplos y guías de uso para ayudar a los desarrolladores a utilizar las diferentes librerías de Procesamiento de Lenguaje Natural (NLP) y adaptar el chatbot a sus necesidades específicas. Además, se exploran técnicas de preprocesamiento de texto, selección de modelos adecuados y ajuste de parámetros para mejorar la precisión y eficiencia del chatbot en diferentes escenarios y dominios.
