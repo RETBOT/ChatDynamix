@@ -100,6 +100,7 @@ Nota: Asegúrate de ajustar la ruta de acuerdo a la ubicación de tu instalació
 8. Reinicia el entorno gráfico de GNOME para que el icono aparezca:
 Nota: Si no funciona, reinicia el sistema por completo.
    ![img-25](./imgs/25.png) 
+
    ``` bash
     gnome-shell --replace &
    ```
@@ -199,6 +200,7 @@ Teniendo GPT4All abierto y con el entorno virtual activado, sigue estos pasos pa
 2. Consulta básica:
     2.1. Crea un archivo llamado [BasicChat.py](https://github.com/RETBOT/ChatDynamix/blob/main/Linux/code/BasicChat.py) y coloca el siguiente código: 
        ![img-42](./imgs/42.png)
+
        ```python
        import openai
 
@@ -235,6 +237,7 @@ Teniendo GPT4All abierto y con el entorno virtual activado, sigue estos pasos pa
 
     2.2. y lo ejecutaremos con el siguiente comando:
        ![img-43](./imgs/43.png)
+       
        ```bash
        python BasicChat.py
        ```
@@ -246,6 +249,7 @@ Teniendo GPT4All abierto y con el entorno virtual activado, sigue estos pasos pa
     3.1. Crearemos un archivo llamado [Server.py](https://github.com/RETBOT/ChatDynamix/blob/main/Linux/code/Server.py), El cual contendra el siguiente codigo:
        python Server.py
        ![img-45](./imgs/45.png)
+
        ```python
        from flask import Flask, request
        import openai
@@ -299,6 +303,7 @@ Teniendo GPT4All abierto y con el entorno virtual activado, sigue estos pasos pa
 
     3.2. y lo ejecutaremos con el siguiente comando:
        ![img-46](./imgs/46.png)
+
        ```bash
        python Server.py
        ```
@@ -329,6 +334,7 @@ Teniendo el entorno virtual activado, sigue estos pasos para crear un servidor:
    ```
 
 2. Crea un archivo llamado [Server2.py](https://github.com/RETBOT/ChatDynamix/blob/main/Linux/code/Server2.py) y coloca el siguiente código: 
+
    ```python
    from flask import Flask, request
    import gpt4all
@@ -385,6 +391,7 @@ Teniendo el entorno virtual activado, sigue estos pasos para crear un servidor:
 
 3. Ejecuta el archivo Server2.py con el siguiente comando:
     ![img-50](./imgs/50.png)
+    
     ```bash
     python Server2.py
     ```
