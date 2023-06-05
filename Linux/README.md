@@ -25,11 +25,12 @@ Sigue estos pasos para instalar gpt4all en Ubuntu:
 ![img-6](./imgs/6.png)
 
 7. Instala la aplicación ejecutando el siguiente comando en la terminal:
+Esto iniciará el instalador de la aplicación.
+![img-7](./imgs/7.png)
+
 ```bash
  ./gpt4all-installer-linux.run
 ```
-Esto iniciará el instalador de la aplicación.
-![img-7](./imgs/7.png)
 
 8. En la pantalla de configuración inicial, selecciona "Siguiente".
 ![img-8](./imgs/8.png)
@@ -84,30 +85,24 @@ Sigue estos pasos para agregar un icono en el inicio de Ubuntu:
 ![img-23](./imgs/23.png)
 
 7. Abre el archivo "GPT4All.desktop" y agrega el siguiente contenido:
-
-```text
-   [Desktop Entry]
-   Type=Application
-   Categories=Utility
-   Name=Gpt4all
-   Icon=/home/user/gpt4all/logo-32.png
-   Exec=/home/user/gpt4all/bin/chat
-``` 
-
 Nota: Asegúrate de ajustar la ruta de acuerdo a la ubicación de tu instalación de gpt4all.
-
 ![img-24](./imgs/24.png)
 
+```text
+[Desktop Entry]
+Type=Application
+Categories=Utility
+Name=Gpt4all
+Icon=/home/user/gpt4all/logo-32.png
+Exec=/home/user/gpt4all/bin/chat
+``` 
+
 8. Reinicia el entorno gráfico de GNOME para que el icono aparezca:
-
-```bash
-    gnome-shell --replace &
-```
-
 Nota: Si no funciona, reinicia el sistema por completo.
 ![img-25](./imgs/25.png)
-
+```bash
+gnome-shell --replace &
+```
 
 9. Si todo ha salido bien, el icono de gpt4all debería aparecer en el inicio. 
 ![img-26](./imgs/26.png)
-
