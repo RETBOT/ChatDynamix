@@ -11,5 +11,7 @@ Con este repositorio, los desarrolladores podrán explorar y utilizar diferentes
 
 
 ## Implementación en Windows
+[Documentación WINDOWS](https://github.com/RETBOT/ChatDynamix/tree/main/Windows)
 
 ## Implementación en Ubuntu linux
+[Documentación LINUX](https://github.com/RETBOT/ChatDynamix/tree/main/Linux)
