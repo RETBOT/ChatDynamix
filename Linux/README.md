@@ -62,3 +62,54 @@ La aplicación está dentro de la carpeta bin/.
 El nombre del archivo ejecutable es chat.
 ![img-17](./imgs/17.png)
 Recuerda esta ubicación para crear el icono de inicio.
+
+### Icono en el inicio de Ubuntu
+
+Sigue estos pasos para agregar un icono en el inicio de Ubuntu:
+
+1. Paso 1: Haz clic en las tres líneas en la esquina superior derecha del administrador de archivos.
+![img-18](./imgs/18.png)
+
+2. Paso 2: Selecciona "Mostrar archivos ocultos" o presiona "Ctrl + H".
+![img-19](./imgs/19.png)
+
+3. Paso 3: Aparecerán los archivos ocultos y entra en la carpeta ".local".
+![img-20](./imgs/20.png)
+
+4. Paso 4: Dentro de la carpeta "local", entra en "share".
+![img-21](./imgs/21.png)
+
+5. Paso 5: Luego, entra en la carpeta "applications".
+   ![img-22](./imgs/22.png)
+
+6. Paso 6: Crea un archivo llamado "GPT4All.desktop" dentro de la carpeta "applications". Asegúrate de agregar la extensión ".desktop" al final del nombre para que sea reconocido por el sistema.
+![img-23](./imgs/23.png)
+
+7. Paso 7: Abre el archivo "GPT4All.desktop" y agrega el siguiente contenido:
+
+```text
+   [Desktop Entry]
+   Type=Application
+   Categories=Utility
+   Name=Gpt4all
+   Icon=/home/user/gpt4all/logo-32.png
+   Exec=/home/user/gpt4all/bin/chat
+``` 
+
+Nota: Asegúrate de ajustar la ruta de acuerdo a la ubicación de tu instalación de gpt4all.
+
+![img-24](./imgs/24.png)
+
+8. Paso 8: Reinicia el entorno gráfico de GNOME para que el icono aparezca:
+
+```bash
+    gnome-shell --replace &
+```
+
+Nota: Si no funciona, reinicia el sistema por completo.
+![img-25](./imgs/25.png)
+
+
+9. Paso 9: Si todo ha salido bien, el icono de gpt4all debería aparecer en el inicio. 
+![img-26](./imgs/26.png)
+
