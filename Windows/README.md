@@ -40,7 +40,11 @@
 
 ![logs](https://github.com/RETBOT/ChatDynamix/assets/71898783/a623d017-1d7a-4899-9ad5-839430523019)
 
-### <li>Ahora para realizar peticiones en mi caso hare uso de Python para realizar la peticion. Debemos de instalar la libreria de openai, con el siguiente comando desde una terminal con el pip habilitado <code>pip install openai</code>.</li>
+### <li>Ahora para realizar peticiones en mi caso hare uso de Python para realizar la peticion. Debemos de instalar la libreria de openai y para esto debemos de abrir en mi caso al usar Anaconda abriré Anaconda PowerShell Prompt</li>
+
+![anaconda](https://github.com/RETBOT/ChatDynamix/assets/71898783/a59cffed-2ba9-43f2-acde-e16407657082)
+
+### <li>Para instalar la libreria necesaria debemos usar el siguiente comando <code>pip install openai</code>.</li>
 
 ![librerias](https://github.com/RETBOT/ChatDynamix/assets/71898783/32fdd638-2f3a-4ca3-af4a-68c2218ed4f6)
 
