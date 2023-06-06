@@ -20,7 +20,7 @@
 
 ## Servidor con GPT4ALL Chat UI
 
-### <li>Para hacer uso de GTP4ALL a modo de servidor para realizar peticiones, debemos de abrir GTP4ALL y habilitar el modo de <b>Enable Web Server</b>. Como se ve a continuacion:</li>
+### <li>Para hacer uso de GTP4ALL a modo de servidor para realizar peticiones, debemos de abrir GTP4ALL y habilitar el modo de <b>Enable Web Server</b>.</li>
 
 ### <li>Una vez que habilitemos la opcion, podemos posicionarnos en el menu de la izquierda en la parte de Server Chat para poder monitorear las peticiones que se realicen en el server.</li>
 
@@ -60,5 +60,8 @@
 
 ### <li>Con la peticion antes realizada ("Te gustan las galletas") nos debe de aparecer lo siguiente tanto en el editor donde se ejecute la peticion al igual que en el GTP4ALL en la parte de Server Chat</li>
 
+![mas_galletas](https://github.com/RETBOT/ChatDynamix/assets/71898783/1ab0945b-6103-4065-a781-7e0faa6828bf)
+
+![galletas](https://github.com/RETBOT/ChatDynamix/assets/71898783/95c325ae-8983-4ff8-bc25-925d5d874eb4)
 
 
