@@ -14,9 +14,8 @@ Con este repositorio, los desarrolladores podrán explorar y utilizar diferentes
 [Documentación WINDOWS](https://github.com/RETBOT/ChatDynamix/tree/main/Windows)
 
 ## Implementación en Ubuntu linux
-Documentación LINUX :point_right:
 <a href="https://github.com/RETBOT/ChatDynamix/tree/main/Linux" rel="nofollow">
-    <img src="./Linux/imgs/ubuntu.png" style="width: 20px; height: 20px;">
+    Documentación LINUX :point_right: <img src="./Linux/imgs/ubuntu.png" style="width: 20px; height: 20px;">
 </a>
 
 <a href="https://github.com/RETBOT/ChatDynamix/tree/main/Linux"> <img src="./Linux/imgs/Name.png"> </a>
