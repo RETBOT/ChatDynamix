@@ -15,4 +15,6 @@ Con este repositorio, los desarrolladores podrán explorar y utilizar diferentes
 
 ## Implementación en Ubuntu linux
 [Documentación LINUX](https://github.com/RETBOT/ChatDynamix/tree/main/Linux)
-![img](https://github.com/RETBOT/ChatDynamix/blob/main/Linux/imgs/53.png)
+<a href="https://github.com/RETBOT/ChatDynamix/tree/main/Linux"> <img src="https://github.com/RETBOT/ChatDynamix/blob/main/Linux/imgs/53.png"> </a>
+
+
