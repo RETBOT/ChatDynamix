@@ -14,20 +14,10 @@ Con este repositorio, los desarrolladores podrán explorar y utilizar diferentes
 [Documentación WINDOWS](https://github.com/RETBOT/ChatDynamix/tree/main/Windows)
 
 ## Implementación en Ubuntu linux
-Documentación LINUX
-<button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;">
-  <a href="https://github.com/RETBOT/ChatDynamix/tree/main/Linux" target="_blank" style="text-decoration: none; color: inherit;">
-    <img src="https://github.com/RETBOT/ChatDynamix/blob/main/Linux/imgs/ubuntu.png" alt="Ubuntu" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">
-    Entrar
-  </a>
-</button>
-
-<button onclick="https://github.com/RETBOT/ChatDynamix/tree/main/Linux">
-  Ir a otra página
-</button>
-
-
-
+Documentación LINUX <br>
+<a href="https://github.com/RETBOT/ChatDynamix/tree/main/Linux" rel="nofollow">
+    <img src="https://github.com/RETBOT/ChatDynamix/blob/main/Linux/imgs/ubuntu.png" style="max-width: 100%;">
+</a>
 
 <a href="https://github.com/RETBOT/ChatDynamix/tree/main/Linux"> <img src="https://github.com/RETBOT/ChatDynamix/blob/main/Linux/imgs/53.png"> </a>
 
