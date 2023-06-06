@@ -209,6 +209,7 @@ Teniendo GPT4All abierto y con el entorno virtual activado, sigue estos pasos pa
        ![img-42](./imgs/42.png)
 
        ```python
+       
        import openai
 
        openai.api_base = "http://localhost:4891/v1"
