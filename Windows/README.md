@@ -1,4 +1,4 @@
-## Windows
+# Instalacion de GTP4ALL en Windows
 
 ### Maquina utilizada:
 
