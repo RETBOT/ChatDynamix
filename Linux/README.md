@@ -1,6 +1,8 @@
 # Instalación de gpt4all para Linux Ubuntu
 
-En este documento se describe cómo instalar y configurar gpt4all en Linux Ubuntu. También se proporcionan ejemplos de código para realizar solicitudes utilizando la interfaz de chat GPT4All Chat UI y la API de Python de GPT4All. <br>
+En este documento se describe cómo instalar y configurar gpt4all en Linux Ubuntu. También se proporcionan ejemplos de código para realizar solicitudes utilizando la interfaz de chat GPT4All Chat UI y la API de Python de GPT4All.
+
+
 ![img-postman](./imgs/Name.png)
 
 ## Instalación
