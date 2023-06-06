@@ -34,9 +34,15 @@
 
 ### <li>Para hacer uso de GTP4ALL a modo de servidor para realizar peticiones, debemos de abrir GTP4ALL y habilitar el modo de <b>Enable Web Server</b>. Como se ve a continuacion:</li>
 
+![enable_web_server](https://github.com/RETBOT/ChatDynamix/assets/71898783/5c6399d1-33d1-405c-925a-04613b97b693)
+
 ### <li>Una vez que habilitemos la opcion, podemos posicionarnos en el menu de la izquierda en la parte de Server Chat para poder monitorear las peticiones que se realicen en el server.</li>
 
+![logs](https://github.com/RETBOT/ChatDynamix/assets/71898783/a623d017-1d7a-4899-9ad5-839430523019)
+
 ### <li>Ahora para realizar peticiones en mi caso hare uso de Python para realizar la peticion. Debemos de instalar la libreria de openai, con el siguiente comando desde una terminal con el pip habilitado <code>pip install openai</code>.</li>
+
+![librerias](https://github.com/RETBOT/ChatDynamix/assets/71898783/32fdd638-2f3a-4ca3-af4a-68c2218ed4f6)
 
 ### <li>Una vez que la instalacion finalice, podemos hacer uso del codigo que comparte la documentacion de GTP4ALL, el cual es:</li>
 
@@ -71,3 +77,11 @@
     ```
 
 ### <li>Con la peticion antes realizada ("Te gustan las galletas") nos debe de aparecer lo siguiente tanto en el editor donde se ejecute la peticion al igual que en el GTP4ALL en la parte de Server Chat</li>
+
+![galletas](https://github.com/RETBOT/ChatDynamix/assets/71898783/24099897-0287-4e57-8dd5-16ac9132b574)
+
+![mas_galletas](https://github.com/RETBOT/ChatDynamix/assets/71898783/27d471d6-da10-44c2-a4aa-2fd4b39043b4)
+
+
+
+
