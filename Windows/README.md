@@ -2,8 +2,6 @@
 
 ### Maquina utilizada:
 
-### Componentes y SW: 
-
 ### <ul><li>Modelo: TUF GAMING FX505DY</li><li>Sistema Operativo: Windows 11</li><li>Procesador: Ryzen 5 3550H</li><li>Almacenamiento: SSD 250GB, HDD 1TB</li><li>RAM: 16GB</li></ul>
 
 ### Instalacion de GTP4ALL en Windows (Disponible para cualquier version de Windows)
