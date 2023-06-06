@@ -1,6 +1,7 @@
 # Instalación de gpt4all para Linux Ubuntu
 
 En este documento se describe cómo instalar y configurar gpt4all en Linux Ubuntu. También se proporcionan ejemplos de código para realizar solicitudes utilizando la interfaz de chat GPT4All Chat UI y la API de Python de GPT4All.
+![img-postman](./imgs/Name.png)
 
 ## Instalación
 
@@ -250,52 +251,64 @@ Teniendo GPT4All abierto y con el entorno virtual activado, sigue estos pasos pa
        python Server.py
        ![img-45](./imgs/45.png)
 
-       ```python
+       ``` python
        from flask import Flask, request
-       import openai
-
-       # Set the base URL for the OpenAI API
-       openai.api_base = "http://localhost:4891/v1"
-       # openai.api_base = "https://api.openai.com/v1"
-
-       openai.api_key = "not needed for a local LLM"
+       import gpt4all
 
        app = Flask(__name__)
 
        # Global variable to store the initial prompt
        prompt = "Hi"
 
-       # Main route to display the current prompt
+       # Global variable to store the library, loaded at startup
+       lib = "ggml-gpt4all-j-v1.3-groovy"
+       gptj = gpt4all.GPT4All(lib)
+
+       # Route to display the current prompt
        @app.route('/')
-           def index():
+       def index():
+           # Displays the current prompt.
            return prompt
 
-       # Route to receive the value via HTTP and update the prompt
+       # Route to install the library
+       @app.route('/install')
+       def install():
+           # Installs the library ggml-gpt4all-j-v1.3-groovy.
+           global gptj
+           gptj = gpt4all.GPT4All("ggml-gpt4all-j-v1.3-groovy")
+           return 'Library installed: ggml-gpt4all-j-v1.3-groovy'
+
+
+       # Route to install a new library
+       @app.route('/install', methods=['POST'])
+       def install_post():
+           # Installs a new library specified in the request form.
+           global lib
+           global gptj
+
+           lib = request.form['lib']
+           gptj = gpt4all.GPT4All(lib)
+           return 'Library installed: ' + lib
+
+       # Route to receive a value via HTTP and update the prompt
        @app.route('/update-prompt', methods=['POST'])
        def update_prompt():
+           # Updates the prompt with the value specified in the request form.
            global prompt
            prompt = request.form['value']
            return 'Prompt updated: ' + prompt
 
-       # Route to generate the response using the updated prompt
+       # Route to generate a response using the updated prompt
        @app.route('/chat', methods=['POST'])
        def generate_response():
+           # Generates a response using the updated prompt.
            global prompt
- 
-           prompt = request.form['value']
-           model = "vicuna-7b-1.1-q4_2"
+           global gptj
 
-           response = openai.Completion.create(
-               model=model,
-               prompt=prompt,
-               max_tokens=50,
-               temperature=.28,
-               top_p=0.95,
-               n=1,
-               echo=True,
-               stream=False
-           )
-           return str(response)
+           prompt = request.form['value']
+           messages = [{"role": "assistant", "content": "As an experienced AI assistant, I'll help you with programming questions and provide code solutions in your preferred language. Your name is ChatDynamix"}, {"role": "user", "content": prompt}]
+           response = gptj.chat_completion(messages)
+           return response
 
        if __name__ == '__main__':
            app.run()
