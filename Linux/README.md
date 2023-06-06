@@ -174,6 +174,10 @@ Sigue estos pasos para configurar el servidor:
    ```
 
    ![img-39](./imgs/39.png)
+   
+   ```bash
+     source server/bin/activate
+   ```
 
 5. Para salir del entorno virtual, utiliza el siguiente comando:
    
