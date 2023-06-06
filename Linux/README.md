@@ -208,8 +208,7 @@ Teniendo GPT4All abierto y con el entorno virtual activado, sigue estos pasos pa
     2.1. Crea un archivo llamado [BasicChat.py](https://github.com/RETBOT/ChatDynamix/blob/main/Linux/code/BasicChat.py) y coloca el siguiente código: 
        ![img-42](./imgs/42.png)
 
-       ```python
-       
+       ```python     
        import openai
 
        openai.api_base = "http://localhost:4891/v1"
