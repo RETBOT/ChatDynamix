@@ -86,6 +86,82 @@
 
 ![mas_galletas](https://github.com/RETBOT/ChatDynamix/assets/71898783/27d471d6-da10-44c2-a4aa-2fd4b39043b4)
 
+## Servidor de GPT4ALL con Python (Para peticiones con terceros)
 
+### Para poder hacer un servidor de este tipo se debe de tener un archivo .py el cual este corriendo en terminal para poder realizar peticiones en tiempo real.
+
+### <li>Para ello en mi caso al usar Anaconda podemos ejecutar la <b>Anaconda PowerShell Prompt<b> en la cual ejecutaremos el archivo .py</li>
+    
+![anaconda](https://github.com/RETBOT/ChatDynamix/assets/71898783/511bfcd4-9797-4912-823d-53b1b811a8a1)
+
+### <li>El servidor ejecutará codigo tanto de tipo POST como GET para las peticiones, el codigo es el siguiente:</li>
+```Python
+    from flask import Flask, request
+    import gpt4all
+
+    app = Flask(__name__)
+
+    # Global variable to store the initial prompt
+    prompt = "Hi"
+
+    # Global variable to store the library, loaded at startup
+    lib = "ggml-gpt4all-j-v1.3-groovy"
+    gptj = gpt4all.GPT4All(lib)
+
+    # Route to display the current prompt
+    @app.route('/')
+    def index():
+        # Displays the current prompt.
+        return prompt
+
+    # Route to install the library
+    @app.route('/install')
+    def install():
+        # Installs the library ggml-gpt4all-j-v1.3-groovy.
+        global gptj
+        gptj = gpt4all.GPT4All("ggml-gpt4all-j-v1.3-groovy")
+        return 'Library installed: ggml-gpt4all-j-v1.3-groovy'
+
+
+    # Route to install a new library
+    @app.route('/install', methods=['POST'])
+    def install_post():
+        # Installs a new library specified in the request form.
+        global lib
+        global gptj
+
+        lib = request.form['lib']
+        gptj = gpt4all.GPT4All(lib)
+        return 'Library installed: ' + lib
+
+    # Route to receive a value via HTTP and update the prompt
+    @app.route('/update-prompt', methods=['POST'])
+    def update_prompt():
+        # Updates the prompt with the value specified in the request form.
+        global prompt
+        prompt = request.form['value']
+        return 'Prompt updated: ' + prompt
+
+    # Route to generate a response using the updated prompt
+    @app.route('/chat', methods=['POST'])
+    def generate_response():
+        # Generates a response using the updated prompt.
+        global prompt
+        global gptj
+
+        prompt = request.form['value']
+        messages = [{"role": "assistant", "content": "As an experienced AI assistant, I'll help you with programming questions and provide code solutions in your preferred language. Your name is ChatDynamix"}, {"role": "user", "content": prompt}]
+        response = gptj.chat_completion(messages)
+        return response
+
+
+    if __name__ == '__main__':
+        app.run()
+```
+### <li>Para ejeuctar debemos de utilizar el comando <code>python servidor.py</code>, el cual nos mostrará lo siguiente:</li>
+![Server2](https://github.com/RETBOT/ChatDynamix/assets/71898783/bbc1c3cf-82b4-4746-9eee-f942246ad382)
+
+### <li>Al final para realizar en mi caso utilizaré Postman en el cual realizare una peticion POST, enviando un valor que sera "¿Cual es tu nombre maquina?" y nos debe mostrar:</li>
+![Postman-chat](https://github.com/RETBOT/ChatDynamix/assets/71898783/189f967e-bf34-4dc4-a446-bc269c26a979)
 
 
