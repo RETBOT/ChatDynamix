@@ -22,6 +22,11 @@ Documentación LINUX
   </a>
 </button>
 
+<button onclick="https://github.com/RETBOT/ChatDynamix/tree/main/Linux">
+  Ir a otra página
+</button>
+
+
 
 
 <a href="https://github.com/RETBOT/ChatDynamix/tree/main/Linux"> <img src="https://github.com/RETBOT/ChatDynamix/blob/main/Linux/imgs/53.png"> </a>
