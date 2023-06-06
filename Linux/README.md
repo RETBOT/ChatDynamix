@@ -98,13 +98,13 @@ Nota: Asegúrate de ajustar la ruta de acuerdo a la ubicación de tu instalació
     Name=Gpt4all
     Icon=/home/user/gpt4all/logo-32.png
     Exec=/home/user/gpt4all/bin/chat
-    ``` 
+    ```
 
 8. Reinicia el entorno gráfico de GNOME para que el icono aparezca:
 Nota: Si no funciona, reinicia el sistema por completo.
    ![img-25](./imgs/25.png) 
 
-   ``` bash
+   ```bash
     gnome-shell --replace &
    ```
 
@@ -257,7 +257,7 @@ Teniendo GPT4All abierto y con el entorno virtual activado, sigue estos pasos pa
        python Server.py
        ![img-45](./imgs/45.png)
 
-       ``` python
+       ```python
        from flask import Flask, request
        import gpt4all
 
