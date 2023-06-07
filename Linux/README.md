@@ -2,7 +2,6 @@
 
 En este documento se describe cómo instalar y configurar gpt4all en Linux Ubuntu. También se proporcionan ejemplos de código para realizar solicitudes utilizando la interfaz de chat GPT4All Chat UI y la API de Python de GPT4All.
 
-
 ![img-postman](./imgs/Name.png)
 
 ## Instalación
@@ -31,9 +30,9 @@ Sigue estos pasos para instalar gpt4all en Ubuntu:
 Esto iniciará el instalador de la aplicación.
    ![img-7](./imgs/7.png)
 
-    ```bash
-    ./gpt4all-installer-linux.run
-    ```
+   ```bash
+   ./gpt4all-installer-linux.run
+   ```
 
 8. En la pantalla de configuración inicial, selecciona "Siguiente".
    ![img-8](./imgs/8.png)
@@ -51,15 +50,15 @@ Esto iniciará el instalador de la aplicación.
 12. Haz clic en "Instalar".
    ![img-13](./imgs/13.png)
 
-    Nota: Si aparece un error durante la instalación, selecciona "Ignorar". <br>
-    Este error ocurre debido a la falta de configuración del icono de inicio en Ubuntu.
+   Nota: Si aparece un error durante la instalación, selecciona "Ignorar". <br>
+   Este error ocurre debido a la falta de configuración del icono de inicio en Ubuntu.
    ![img-Nota](./imgs/14.png)
 
 13. Haz clic en "Finalizar" para completar la instalación.
    ![img-15](./imgs/15.png)
 
-    Nota 2: La aplicación se encuentra en la ubicación donde se realizó la instalación en el paso 9. En mi caso, se encuentra en home/user/gpt4all. <br>
-    La aplicación está dentro de la carpeta bin/.
+   Nota 2: La aplicación se encuentra en la ubicación donde se realizó la instalación en el paso 9. En mi caso, se encuentra en home/user/gpt4all. <br>
+   La aplicación está dentro de la carpeta bin/.
    ![img-15](./imgs/16.png)
     El nombre del archivo ejecutable es chat.
    ![img-17](./imgs/17.png)
@@ -98,17 +97,17 @@ Nota: Asegúrate de ajustar la ruta de acuerdo a la ubicación de tu instalació
     Name=Gpt4all
     Icon=/home/user/gpt4all/logo-32.png
     Exec=/home/user/gpt4all/bin/chat
-    ```
+    ``` 
 
 8. Reinicia el entorno gráfico de GNOME para que el icono aparezca:
 Nota: Si no funciona, reinicia el sistema por completo.
-   ![img-25](./imgs/25.png) 
+   ![img-25](./imgs/25.png)
 
-   ```bash
+   ``` bash
     gnome-shell --replace &
    ```
 
-9. Si todo ha salido bien, el icono de gpt4all debería aparecer en el inicio. 
+9. Si todo ha salido bien, el icono de gpt4all debería aparecer en el inicio.
    ![img-26](./imgs/26.png)
 
 ## Configuración GPT4All Chat UI
@@ -152,25 +151,25 @@ Sigue estos pasos para configurar el servidor:
    pip --version
    ```
 
-2. Si no están instalados, ejecuta el siguiente comando para instalar Python 3 y pip: 
+2. Si no están instalados, ejecuta el siguiente comando para instalar Python 3 y pip:
    ![img-36](./imgs/36.png)
 
    ```bash
-    sudo apt install python3 python3-pip
+   sudo apt install python3 python3-pip
    ```
 
-3. Luego, instala virtualenv para crear un entorno virtual donde se ejecutará el servidor: 
+3. Luego, instala virtualenv para crear un entorno virtual donde se ejecutará el servidor:
    ![img-37](./imgs/37.png)
 
    ```bash
-    sudo apt install virtualenv
+   sudo apt install virtualenv
    ```
 
 4. Crea el entorno virtual utilizando el siguiente comando. Puedes elegir el nombre que desees para el entorno, en este caso lo llamaremos "server":
    ![img-38](./imgs/38.png)
 
    ```bash
-    virtualenv server
+   virtualenv server
    ```
 
    ![img-39](./imgs/39.png)
@@ -180,15 +179,15 @@ Sigue estos pasos para configurar el servidor:
    ```
 
 5. Para salir del entorno virtual, utiliza el siguiente comando:
-   
+
    ```bash
-    deactivate
+   deactivate
    ```
 
    Para volver a entrar al entorno virtual, utiliza el siguiente comando:
-   
+
    ```bash
-    source nombre_del_entorno/bin/activate
+   source nombre_del_entorno/bin/activate
    ```
 
 ## Server con GPT4All Chat UI
@@ -205,227 +204,146 @@ Teniendo GPT4All abierto y con el entorno virtual activado, sigue estos pasos pa
    ![img-41](./imgs/41.png)
 
 2. Consulta básica:
-    2.1. Crea un archivo llamado [BasicChat.py](https://github.com/RETBOT/ChatDynamix/blob/main/Linux/code/BasicChat.py) y coloca el siguiente código: 
-       ![img-42](./imgs/42.png)
-
-       ```python     
-       import openai
-
-       openai.api_base = "http://localhost:4891/v1"
-       #openai.api_base = "https://api.openai.com/v1"
-
-       openai.api_key = "not needed for a local LLM"
-
-       # Set up the prompt and other parameters for the API request
-       prompt = "Hi"
-       print(prompt)
-
-       # Models
-       # model = "gpt-3.5-turbo"
-       #model = "mpt-7b-chat"
-       #model = "gpt4all-j-v1.3-groovy"
-       model = "vicuna-7b-1.1-q4_2"
-
-       # Make the API request
-       response = openai.Completion.create(
-           model=model,
-           prompt=prompt,
-           max_tokens=400,
-           temperature=0.7,
-           top_p=0.95,
-           n=1,
-           echo=True,
-           stream=False
-       )
-
-       # Print the generated completion
-       print(response)
-       ```
-
-    2.2. y lo ejecutaremos con el siguiente comando:
-       ![img-43](./imgs/43.png)
-       
-       ```bash
-       python BasicChat.py
-       ```
-
-    2.3. y dara como resultado la siguiente consulta: 
-       ![img-44](./imgs/44.png)
-
-3. Consulta Avanzada utilizando postman: 
-    3.1. Crearemos un archivo llamado [Server.py](https://github.com/RETBOT/ChatDynamix/blob/main/Linux/code/Server.py), El cual contendra el siguiente codigo:
-       python Server.py
-       ![img-45](./imgs/45.png)
+   2.1. Crea un archivo llamado [BasicChat.py](https://github.com/RETBOT/ChatDynamix/blob/main/Linux/code/BasicChat.py) y coloca el siguiente código:
+   ![img-42](./imgs/42.png)
 
        ```python
-       from flask import Flask, request
-       import gpt4all
+       import openai
 
-       app = Flask(__name__)
+   openai.api_base = "http://localhost:4891/v1"
+   #openai.api_base = "https://api.openai.com/v1"
 
-       # Global variable to store the initial prompt
-       prompt = "Hi"
+   openai.api_key = "not needed for a local LLM"
 
-       # Global variable to store the library, loaded at startup
-       lib = "ggml-gpt4all-j-v1.3-groovy"
-       gptj = gpt4all.GPT4All(lib)
+   # Set up the prompt and other parameters for the API request
+   prompt = "Hi"
+   print(prompt)
 
-       # Route to display the current prompt
-       @app.route('/')
-       def index():
-           # Displays the current prompt.
-           return prompt
+   # Models
+   # model = "gpt-3.5-turbo"
+   #model = "mpt-7b-chat"
+   #model = "gpt4all-j-v1.3-groovy"
+   model = "vicuna-7b-1.1-q4_2"
 
-       # Route to install the library
-       @app.route('/install')
-       def install():
-           # Installs the library ggml-gpt4all-j-v1.3-groovy.
-           global gptj
-           gptj = gpt4all.GPT4All("ggml-gpt4all-j-v1.3-groovy")
-           return 'Library installed: ggml-gpt4all-j-v1.3-groovy'
+   # Make the API request
+   response = openai.Completion.create(
+      model=model,
+      prompt=prompt,
+      max_tokens=400,
+      temperature=0.7,
+      top_p=0.95,
+      n=1,
+      echo=True,
+      stream=False
+   )
 
-
-       # Route to install a new library
-       @app.route('/install', methods=['POST'])
-       def install_post():
-           # Installs a new library specified in the request form.
-           global lib
-           global gptj
-
-           lib = request.form['lib']
-           gptj = gpt4all.GPT4All(lib)
-           return 'Library installed: ' + lib
-
-       # Route to receive a value via HTTP and update the prompt
-       @app.route('/update-prompt', methods=['POST'])
-       def update_prompt():
-           # Updates the prompt with the value specified in the request form.
-           global prompt
-           prompt = request.form['value']
-           return 'Prompt updated: ' + prompt
-
-       # Route to generate a response using the updated prompt
-       @app.route('/chat', methods=['POST'])
-       def generate_response():
-           # Generates a response using the updated prompt.
-           global prompt
-           global gptj
-
-           prompt = request.form['value']
-           messages = [{"role": "assistant", "content": "As an experienced AI assistant, I'll help you with programming questions and provide code solutions in your preferred language. Your name is ChatDynamix"}, {"role": "user", "content": prompt}]
-           response = gptj.chat_completion(messages)
-           return response
-
-       if __name__ == '__main__':
-           app.run()
-       ```
-
-    3.2. y lo ejecutaremos con el siguiente comando:
-       ![img-46](./imgs/46.png)
-
-       ```bash
-       python Server.py
-       ```
-
-    3.3. utilizando postman seleccionamremos una consulta GET:
-        a la url: http://localhost:5000 o a la que le generer el paso anterior
-        y dara como resultado la siguiente consulta: 
-       ![img-47](./imgs/47.png)
-       que en este caso es el valor que tiene por default el mensaje
-    
-    3.4. para utilizar el chat seleccionaremos una consulta POST: 
-        a la url: http://localhost:5000 o a la que le generer el paso anterior
-        en el body, seleccionamos form-data y agregaremos un nuevo valor llamado "value" y el contenido
-        es el mensaje a enviar, en este caso es "Hi" y el resultado sera la respuesta generada por gpt4all
-        ![img-48](./imgs/48.png)
-
-Para mas informacion entrar a [GPT4All Chat UI Documentation](https://docs.gpt4all.io/gpt4all_chat.html)
-
-## Server con GPT4All Python API
-
-Teniendo el entorno virtual activado, sigue estos pasos para crear un servidor:
-
-1. Instala gpt4all desde la terminal ejecutando el siguiente comando:
-   ![img-49](./imgs/49.png)
-
-   ```bash
-   pip install gpt4all
+   # Print the generated completion
+   print(response)
    ```
 
-2. Crea un archivo llamado [Server2.py](https://github.com/RETBOT/ChatDynamix/blob/main/Linux/code/Server2.py) y coloca el siguiente código: 
+   2.2. y lo ejecutaremos con el siguiente comando:
+      ![img-43](./imgs/43.png)
 
-   ```python
-   from flask import Flask, request
-   import gpt4all
+      ```bash
+      python BasicChat.py
+      ```
+
+   2.3. y dara como resultado la siguiente consulta:
+      ![img-44](./imgs/44.png)
+
+3. Consulta Avanzada utilizando postman:
+   3.1. Crearemos un archivo llamado [Server.py](https://github.com/RETBOT/ChatDynamix/blob/main/Linux/code/Server.py), El cual contendra el siguiente codigo:
+
+      ```bash
+      nano Server.py
+      ```
+
+      ![img-45](./imgs/45.png)
+
+       ``` python
+       from flask import Flask, request
+       import gpt4all
 
    app = Flask(__name__)
 
    # Global variable to store the initial prompt
    prompt = "Hi"
 
-   # Global variable to store the library
+   # Global variable to store the library, loaded at startup
    lib = "ggml-gpt4all-j-v1.3-groovy"
+   # After installing the library, uncomment this line to make the conversations faster.
+   # gptj = gpt4all.GPT4All(lib)
 
-   # Main route to display the current prompt
+   # Route to display the current prompt
    @app.route('/')
    def index():
-       return prompt
+      # Displays the current prompt.
+      return prompt
 
    # Route to install the library
    @app.route('/install')
    def install():
-       gptj = gpt4all.GPT4All("ggml-gpt4all-j-v1.3-groovy")
-       return 'Library installed: ggml-gpt4all-j-v1.3-groovy'
+      # Installs the library
+      global gptj
+      global lib
 
-   # Route to install the library via POST request
+      gptj = gpt4all.GPT4All(lib)
+      return 'Library installed: '+lib
+
+
+   # Route to install a new library
    @app.route('/install', methods=['POST'])
    def install_post():
-       global lib
+      # Installs a new library specified in the request form.
+      global lib
+      global gptj
 
-       lib = request.form['lib']
-       gptj = gpt4all.GPT4All(lib)
-       return 'Library installed: ' + lib
+      lib = request.form['lib']
+      gptj = gpt4all.GPT4All(lib)
+      return 'Library installed: ' + lib
 
-   # Route to receive the value via HTTP and update the prompt
+   # Route to receive a value via HTTP and update the prompt
    @app.route('/update-prompt', methods=['POST'])
    def update_prompt():
-       global prompt
-       prompt = request.form['value']
-       return 'Prompt updated: ' + prompt
+      # Updates the prompt with the value specified in the request form.
+      global prompt
+      prompt = request.form['value']
+      return 'Prompt updated: ' + prompt
 
-   # Route to generate the response using the updated prompt
+   # Route to generate a response using the updated prompt
    @app.route('/chat', methods=['POST'])
    def generate_response():
-       global prompt
-       global lib
+      # Generates a response using the updated prompt.
+      global prompt
+      global gptj
 
-       prompt = request.form['value']
-       gptj = gpt4all.GPT4All(lib)
-       messages = [{"role": "user", "content": prompt}]
-       return str(gptj.chat_completion(messages))
+      prompt = request.form['value']
+      messages = [{"role": "assistant", "content": "As an experienced AI assistant, I'll help you with programming questions and provide code solutions in your preferred language. Your name is ChatDynamix"}, {"role": "user", "content": prompt}]
+      response = gptj.chat_completion(messages)
+      return response
 
    if __name__ == '__main__':
-       app.run()
+      app.run()
    ```
 
 3. Ejecuta el archivo Server2.py con el siguiente comando:
     ![img-50](./imgs/50.png)
-    
+
     ```bash
     python Server2.py
     ```
 
 4. Instala una biblioteca en el servidor:
-    - Si deseas instalar una biblioteca por defecto, realiza una solicitud GET a la URL http://localhost:5000/install utilizando Postman.
-    - Si deseas instalar una biblioteca diferente, consulta la página oficial de GPT4All para obtener una lista de bibliotecas disponibles. Luego, realiza una solicitud POST a la misma URL (http://localhost:5000/install) utilizando Postman. En el cuerpo de la solicitud, selecciona "form-data" y agrega un nuevo campo llamado "lib" con el nombre de la biblioteca que deseas instalar.
-    
+    - Si deseas instalar una biblioteca por defecto, realiza una solicitud GET a la URL <http://localhost:5000/install> utilizando Postman.
+    - Si deseas instalar una biblioteca diferente, consulta la página oficial de GPT4All para obtener una lista de bibliotecas disponibles. Luego, realiza una solicitud POST a la misma URL (<http://localhost:5000/install>) utilizando Postman. En el cuerpo de la solicitud, selecciona "form-data" y agrega un nuevo campo llamado "lib" con el nombre de la biblioteca que deseas instalar.
+
    ![img-51](./imgs/51.png)
-   
+
 5. Espera a que se complete la instalación de la biblioteca. Este proceso solo es necesario la primera vez que instalas una biblioteca nueva.
    ![img-52](./imgs/52.png)
 
-6. Una vez instalada la biblioteca, puedes realizar solicitudes de chat. Abre una nueva pestaña en Postman, 
-    selecciona el método POST y utiliza la URL http://localhost:5000/chat. En el cuerpo de la solicitud, selecciona "form-data" y agrega un nuevo campo llamado "value" con el mensaje que deseas enviar. Por ejemplo, utiliza "Hi". Obtendrás la respuesta generada por GPT4All.
+6. Una vez instalada la biblioteca, puedes realizar solicitudes de chat. Abre una nueva pestaña en Postman,
+    selecciona el método POST y utiliza la URL <http://localhost:5000/chat>. En el cuerpo de la solicitud, selecciona "form-data" y agrega un nuevo campo llamado "value" con el mensaje que deseas enviar. Por ejemplo, utiliza "Hi". Obtendrás la respuesta generada por GPT4All.
    ![img-53](./imgs/53.png)
 
 7. También puedes ver el mensaje en la terminal donde se está ejecutando el servidor:
