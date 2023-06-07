@@ -23,4 +23,5 @@ Con este repositorio, los desarrolladores podrán explorar y utilizar diferentes
 
 <a href="https://github.com/RETBOT/ChatDynamix/tree/main/Linux"> <img src="./Linux/imgs/Name.png"> </a>
 
+<iframe src="https://colab.research.google.com/drive/13tri4cR1NHcBeCDawFBwq7cxj8qgXstS?usp=sharing" width="100%" height="500px"></iframe>
 
