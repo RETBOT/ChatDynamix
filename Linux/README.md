@@ -194,11 +194,11 @@ Sigue estos pasos para configurar el servidor:
 
 Teniendo GPT4All abierto y con el entorno virtual activado, sigue estos pasos para crear un servidor:
 
-1. Instala openai ejecutando el siguiente comando:
+1. Instala openai, gpt4all y flask ejecutando el siguiente comando:
    ![img-40](./imgs/40.png)
 
    ```bash
-   pip install openai
+   pip install openai gpt4all flask
    ```
 
    ![img-41](./imgs/41.png)
